@@ -1,5 +1,19 @@
 import pandas as pd
 import os
+import re
+import emoji
+
+def clean_text(text):
+    text = str(text)
+    # 1. Remove URLs
+    text = re.sub(r'http\S+|www\.\S+', '', text)
+    # 2. Remove @usernames
+    text = re.sub(r'@[A-Za-z0-9_]+', '', text)
+    # 3. Remove Emojis
+    text = emoji.replace_emoji(text, replace='')
+    # 4. Remove extra whitespaces
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
 
 # --- Configuration & Paths ---
 # Update these filenames to match exactly what is in your data/raw folder.
@@ -60,6 +74,9 @@ def main():
 
         # 3. Basic Cleaning & Normalization
         print("Cleaning unified data...")
+        # Clean the text column
+        print("Applying text cleaning (removing URLs, mentions, emojis)...")
+        unified_df['text'] = unified_df['text'].apply(clean_text)
         # Drop rows with missing text or labels
         unified_df.dropna(subset=['text', 'label'], inplace=True)
         # Ensure labels are integers
