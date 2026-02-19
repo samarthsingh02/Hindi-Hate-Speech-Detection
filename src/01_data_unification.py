@@ -4,7 +4,7 @@ import re
 import emoji
 
 def clean_text(text):
-    text = str(text)
+    text = str(text).lower()
     # 1. Remove URLs
     text = re.sub(r'http\S+|www\.\S+', '', text)
     # 2. Remove @usernames
