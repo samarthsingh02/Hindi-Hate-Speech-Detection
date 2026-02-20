@@ -4,4 +4,5 @@ __pycache__/
 .idea/
 data/raw/
 data/processed/
+data/embeddings/
 models/
