@@ -1,0 +1,9 @@
+Feature_Set,Model,Best_C,CV_F1_Score
+Word_1_1,Logistic_Regression,1.0,0.68361922665418
+Word_1_1,Linear_SVM,0.1,0.6854152235048042
+Word_1_2,Logistic_Regression,1.0,0.6856714861350651
+Word_1_2,Linear_SVM,0.1,0.6871203053488322
+Char_3_5,Logistic_Regression,1.0,0.7036236571640321
+Char_3_5,Linear_SVM,0.1,0.7055383609090475
+Combined_Word_Char,Logistic_Regression,1.0,0.7171271275856803
+Combined_Word_Char,Linear_SVM,0.1,0.7192794582355545

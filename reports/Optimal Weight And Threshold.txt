@@ -1,0 +1,26 @@
+"E:\SRM Semester Work\Semester - 8\Major Project\Hindi Hate Speech\Hindi-Hate-Speech-Project\.venv\Scripts\python.exe" "E:\SRM Semester Work\Semester - 8\Major Project\Hindi Hate Speech\Hindi-Hate-Speech-Project\src\07_weighted_ensemble_optimizer.py"
+Loading validation data...
+Loading MuRIL from: ../models/transformers/muril/scout_lr2e-05\checkpoint-38800
+E:\SRM Semester Work\Semester - 8\Major Project\Hindi Hate Speech\Hindi-Hate-Speech-Project\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1617: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be deprecated in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Generating MuRIL Probs: 100%|██████████| 1940/1940 [03:00<00:00, 10.77it/s]
+Loading XLM-RoBERTa from: ../models/transformers/xlm_roberta/scout_lr2e-05\checkpoint-38800
+E:\SRM Semester Work\Semester - 8\Major Project\Hindi Hate Speech\Hindi-Hate-Speech-Project\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1617: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be deprecated in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Generating XLM-RoBERTa Probs: 100%|██████████| 1940/1940 [02:58<00:00, 10.86it/s]
+
+==================================================
+INITIATING CPU GRID SEARCH (WEIGHTS & THRESHOLDS)
+==================================================
+OPTIMAL COMBINATION FOUND:
+MuRIL Weight      : 70.0%
+XLM-RoBERTa Weight: 30.0%
+Optimal Threshold : 0.30
+--------------------------------------------------
+New Peak F1-Score : 0.7701
+Recall            : 0.7809
+Precision         : 0.7595
+Accuracy          : 0.8638
+==================================================
+
+Process finished with exit code 0
